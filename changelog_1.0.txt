@@ -1,0 +1,19 @@
+- Improved schedule management capabilities
+    - Schedule is now automatically coppied from connected USB drive
+        - For the feature to work with auto-run enabled, the Raspberry Pi must be configured to auto mount the USB drive on startup
+        - Schedule must be located in </mnt/usb/schedule.csv>
+        - If this file cannot be found, the software's current directory is searched
+        - Automatic copying can be turned off by setting the variable "copySchedule" to False. This will open the schedule from the current directory
+        - If no schedule is found, the imaging process is skipped, rather than happening with zero targets
+    - Error checking is performed on the schedule. This only checks that the 'header' row of the schedule contains the expected values
+    - Only the required fields are stored for the duration of the imaging window to reduce memory usage
+- Log files are now automatically coppied to the connected USB drive
+    - This feature can be disabled by setting the variable "copyLog" to False
+    - The log file will remain in the current directory of the software
+    - Log files saved to the USB drive have the same filename: YYYYMMDD.csv
+    - If there is already a log file on the USB drive with the current date as the file name, this will be overwritten.
+- Altered functionality of the indicator LEDs
+    - If no schedule can be found, the ORANGE LED turns on and the software closes.
+    - If there is no camera connected when trying to capture an image, the ORANGE LED illuminated for 0.5 seconds
+    - The YELLOW LED blinks rapidly when the motors are turning
+    - the YELLOW LED is solid when the device is in position and waiting to capture images
