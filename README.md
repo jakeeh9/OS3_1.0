@@ -60,7 +60,7 @@ The software can be stopped at any time by using `ctrl + c`. If the motor is mov
 - I have plans to work on an installer that will automatically download all the relevant software and python modules and do as much of the configuration as possible.
 
 ## Credits
-Authors: Jake Heath  
-Email: jh02041@surrey.ac.uk
+**Authors:** Jake Heath, _University of Surrey_  
+**Email:** jh02041@surrey.ac.uk
 
-Developed in collaboration with: James Morbin, University of Surrey
+**Developed in collaboration with:** James Morbin, _University of Surrey_
